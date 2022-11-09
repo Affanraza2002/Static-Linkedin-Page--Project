@@ -1,0 +1,761 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f3f2ef;
+}
+/* Navbar Start Here */
+
+nav #navbar {
+  z-index: 15;
+  background: #ffffff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  
+}
+nav #navbar .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 3rem;
+}
+
+nav #navbar .left {
+  padding-left: 6rem;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+nav #navbar .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav #navbar .logo i {
+  font-size: 1rem;
+  color: #0a66c2;
+  cursor: pointer;
+}
+nav #navbar .logo > i {
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: #0a66c2;
+}
+nav #navbar .left #input {
+  background: rgb(226, 245, 250);
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+}
+nav #navbar .left #input input[type="search"] {
+  width: 15rem;
+  border: none;
+  background: transparent;
+}
+nav #navbar .left #input input[type="search"]::placeholder {
+  font-size: 0.7rem;
+  color: rgb(49, 49, 49);
+  font-weight: 100;
+}
+nav #navbar .left .input {
+  font-size: 0.8rem;
+  color: grey;
+}
+nav #navbar .right .work{
+  border-left: 1px dotted gray;
+  padding-left: 1rem;
+}
+nav #navbar .right .home,
+nav #navbar .right .network,
+nav #navbar .right .Jobs,
+nav #navbar .right .messaging,
+nav #navbar .right .notification,
+nav #navbar .right .me,
+nav #navbar .right .work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: grey;
+  transition: 0.5s all ease;
+}
+nav #navbar .right .home:hover,
+nav #navbar .right .network:hover,
+nav #navbar .right .Jobs:hover,
+nav #navbar .right .messaging:hover,
+nav #navbar .right .notification:hover,
+nav #navbar .right .me .medown:hover,
+nav #navbar .right .work .medown:hover {
+  color: black;
+}
+
+nav #navbar .right .home i,
+nav #navbar .right .network i,
+nav #navbar .right .Jobs i,
+nav #navbar .right .messaging i,
+nav #navbar .right .notification i {
+  font-size: 1.2rem;
+}
+nav #navbar .right .me .medown,
+nav #navbar .right .work .medown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: grey;
+  background: #ffffff;
+}
+/* DRop Down Menu Start Here */
+nav #navbar .right .me  .dropdown{
+  
+  display: none;
+}
+nav #navbar .right .me:hover  .dropdown{
+  display: block;
+  position:absolute ;
+  right: 20%;
+  top: 20%;
+  margin-top: 3rem;
+  background:white;
+  height: 60vh;
+  width: 20vw;
+  border-radius: 15px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  
+}
+nav #navbar .right .me  .dropdown .top1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0rem;
+  border-bottom: 1px solid rgb(226, 245, 250);
+  gap: 1rem;
+}
+nav #navbar .right .me  .dropdown .top1:hover{
+  text-decoration: underline;
+  }
+  
+  nav #navbar .right .me  .dropdown .top1 h5{
+    color: #000;
+  }
+  
+  nav #navbar .right .me  .dropdown .top1 small{
+    font-size: 0.7rem;
+    line-height: 0.3rem;
+  
+    color: gray;
+  }
+  
+  nav #navbar .right .me  .dropdown .top1 img{
+    margin:0.5rem 0.2rem  ;
+    height: 4.5rem;
+    width :4rem;
+    border-radius: 50%;
+  }
+nav #navbar .right .me  .dropdown .viewpro{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid rgb(10, 102, 194);
+  border-radius: 2rem;
+}
+nav #navbar .right .me  .dropdown .viewpro:hover{
+ border: 2px solid rgb(0, 65, 130);
+}
+nav #navbar .right .me  .dropdown .viewpro h5 a{
+  text-decoration: none;
+  color: #0a66c2;
+}
+
+nav #navbar .right .me  .dropdown .account{
+  display:block;
+  padding-top: 1rem;
+  padding-left: 0.8rem;
+  border-bottom: 1px solid gray;
+ 
+ justify-content: left;
+ text-align:left;
+
+}
+nav #navbar .right .me  .dropdown .account h5{
+  color: #000;
+
+}
+nav #navbar .right .me  .dropdown .account h4{
+  padding-left: 0.5rem;
+}
+
+nav #navbar .right .me  .dropdown .account h4 a:hover{
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+nav #navbar .right .me  .dropdown .account  i{
+  color:rgb(231, 163, 62);
+  padding-right: 0.3rem;
+  
+}
+
+nav #navbar .right .me  .dropdown .account h6{
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: rgb(180, 180, 180);
+}
+
+nav #navbar .right .me  .dropdown .manage h5{
+  color: #000;
+  padding-left: 1rem;
+ 
+}
+nav #navbar .right .me  .dropdown .manage h6{
+  padding:0.5rem  1.2rem ;
+  font-size: 0.8rem;
+  color: rgb(180, 180, 180);
+}
+
+ /* Drop Down End Here */
+nav #navbar .right .work .medown {
+  padding-top: 0.5rem;
+}
+nav #navbar .right .me > i {
+  background: grey;
+  color: #ffffff;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbar a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  color: gray;
+}
+#navbar a:hover {
+  text-decoration: underline;
+ 
+}
+/* Navbar End Here */
+
+/* Main Body Start Here */
+section {
+  margin-top: 2rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: 20% 52% 28%;
+  gap: 2rem;
+  margin: 4.8rem auto;
+  width: 85%;
+}
+/* LeftSider Start Here */
+aside .sidebar {
+  background: #fff;
+  width: 100%;
+  height: 62vh;
+  border-radius: 0.8rem;
+  box-shadow: -22px 19px 43px -9px rgba(55,143,233,0.61);
+}
+.sidebar .top {
+  width: 17vw;
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
+  height: 12vh;
+  background: rgb(41, 171, 119);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 171, 119, 1) 4%,
+    rgba(173, 16, 127, 1) 50%,
+    rgba(0, 211, 255, 1) 92%
+  );
+  position: absolute;
+}
+.sidebar img {
+  width: 6rem;
+  height: 7rem;
+  position: relative;
+  border-radius: 50%;
+  top: 5%;
+  left: 28%;
+  border: 2px solid white;
+}
+aside .sidebar .profile {
+  position: relative;
+  text-align: center;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px double rgb(135, 135, 135);
+}
+.sidebar .profile a {
+  text-decoration: none;
+  color: black;
+}
+.sidebar .profile a:hover {
+  text-decoration: underline;
+}
+.sidebar .profile small {
+  font-size: 0.7rem;
+  color: gray;
+}
+.sidebar .view {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  top: 5%;
+  
+  border-bottom: 1px solid rgb(135, 135, 135);
+}
+.sidebar .view .views {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 100;
+}
+.sidebar .view :hover {
+  background-color: rgb(235, 235, 235);
+}
+.sidebar .view .views a {
+  color: rgb(92, 153, 214);
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+.sidebar .premium {
+  position: relative;
+  top: 7%;
+  border-bottom: 2px solid rgb(217, 217, 217);
+}
+.sidebar .premium h6 {
+  color: gray;
+  font-weight: 100;
+  margin-left: 0.5rem;
+}
+.sidebar .premium a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  color: #000;
+}
+.sidebar .premium a:hover {
+  text-decoration: underline;
+}
+.sidebar .premium a i {
+  color: rgb(231, 163, 62);
+  margin: 0.2rem;
+}
+.items {
+  position: relative;
+  top: 7%;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  margin-left: 1.2rem;
+  color: gray;
+  cursor: pointer;
+}
+.recent {
+  margin-top: 1rem;
+  background: #fff;
+  width: 100%;
+  height: 78vh;
+  border-radius: 0.8rem;
+  position: sticky;
+  top: 12%;
+  box-shadow: -22px 19px 43px -9px rgba(55,143,233,0.61);
+}
+.recent h5 {
+  padding: 1rem 1.2rem;
+  color: #0a66c2;
+}
+.recent ul {
+  list-style: none;
+  margin: 0.4rem 1rem;
+  line-height: 1.5rem;
+  word-spacing: normal;
+}
+
+.recent ul li a {
+  color: gray;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: 0.1s;
+}
+.recent ul li a:hover{
+  color: black;
+
+}
+.recent .groups h5,
+.recent .follow h5 {
+  color: #0a66c2;
+}
+.recent .groups .group,
+.recent .follow .group {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+}
+.recent .groups .group a,
+.recent .follow .group a {
+  color: gray;
+  text-decoration: none;
+}
+/* Contain Css Start Here */
+
+
+main .media {
+  background: #fff;
+  border-radius: 0.8rem;
+  height: 20vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .media .search {
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem;
+}
+main .media .search img {
+  width: 3.5rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .media .search input{
+    border-radius: 5rem;
+    border: 1px solid gray;
+    width: 100%;
+    padding: 0 0.8rem;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+main .media .search input:hover{
+    background: rgb(235, 233, 233);
+}
+main .media .posts{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 2rem ;
+}
+main .media .posts .post{
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.8rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+main .media .posts .post:nth-child(1) i{
+    color:rgb(55, 143, 233);
+}main .media .posts .post:nth-child(2) i{
+    color: rgb(95, 155, 65);
+}main .media .posts .post:nth-child(3) i{
+    color: rgb(200, 138, 48);
+}main .media .posts .post:nth-child(4) i{
+    color:#e16745;
+}
+main .media .posts .post:hover{
+    background: rgb(235, 235, 235);
+    border-radius: 0.4rem;
+    opacity: 1;
+}
+main .main_section{
+  background: #fff;
+  border-radius: 0.8rem;
+  height: 135vh;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main  #linkdin{background: #fff;
+  border-radius: 0.8rem;
+  height: 115vh;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main #netflix{
+  background: #fff;
+  border-radius: 0.8rem;
+  height: 125vh;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main #microsoft{
+  background: #fff;
+  border-radius: 0.8rem;
+  height: 132vh;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+main .main_section .title{
+    display: flex;
+    align-items: center;
+   padding: 0.8rem;
+}
+main .main_section .title .first img{
+  border-radius: 10px;
+ height: 4rem;
+ width: 3.5rem;
+}
+main .main_section .title .second {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  cursor: pointer;
+}
+main .main_section .title .second h4:hover{
+   color: #0a66c2;
+   text-decoration: underline;
+}
+main .main_section .title .second small{
+  color: gray;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+main .main_section .title .second i{
+ position:absolute;
+ top: 35%;
+ right: 30%;
+ font-size: 1.3rem;
+ padding: 0.5rem;
+ cursor: pointer;
+}
+main .main_section .title .second i:hover{
+  background: rgb(235, 235, 235);
+  border-radius: 70%;
+}
+main .main_section .para{
+ padding: 0.5rem 2rem ;
+ font-size: 1rem;
+ word-spacing: 0.2rem;
+ line-height: 1.3rem;
+}
+main .main_section .para span{
+  color: rgb(29, 114, 199);
+  font-weight: 500;
+
+}
+main .main_section .para span a{
+  text-decoration: none;
+  color: rgb(29, 114, 199);
+}
+main .main_section .para span:hover{
+  text-decoration: underline;
+}
+main .main_section .img img{
+  width: 100%;
+  cursor: pointer;
+}
+main .main_section .parameters{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 0.4rem;
+  margin: 1rem 1.4rem;
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+main .main_section .parameters small i{
+  font-size: 0.80rem;
+  padding: 0.40rem;
+}
+
+main .main_section .parameters small{
+  cursor: pointer;
+  
+}
+main .main_section .parameters small:hover{
+  color: #0a66c2;
+  text-decoration: underline;
+}
+main .main_section .lcrs{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.4rem;
+}
+main .main_section .lcrs .like,
+main .main_section .lcrs .comments,
+main .main_section .lcrs  .repost,
+main .main_section .lcrs  .send{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1.5rem;
+  padding:1rem  2rem;
+  border-radius: 10px;
+  gap: 0.4rem;
+  color: rgb(94, 94, 94);
+  cursor: pointer;
+}
+main .main_section .lcrs .like:hover,
+main .main_section .lcrs .comments:hover,
+main .main_section .lcrs  .repost:hover,
+main .main_section .lcrs  .send:hover{
+  background-color: rgb(235, 235, 235);
+}
+
+
+/* Right Side Start Here */
+.right_side {
+  background: #fff;
+  border-radius: 0.8rem;
+  height: 70vh;
+ 
+  box-shadow: 22px 19px 43px -9px rgba(55,143,233,0.61);
+}
+.right_side .news,
+.suggs .news
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding:1rem 1rem;
+}
+.right_side .news h4,
+.suggs .news h4
+{
+    font-weight: 400;
+}
+.right_side .latest_news{
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.right_side .latest_news:hover{
+    background: rgb(235, 235, 235);
+}
+.right_side .latest_news .one{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.right_side .latest_news .one i{
+    font-size: 0.5rem;
+    color: gray;
+}
+.right_side .latest_news .one h5{
+    font-weight: 500;
+
+}
+.right_side .latest_news .two{
+    margin: 0 1.9rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+.right_side .show_more {
+    display: flex;
+    gap: 0.5rem;
+    color: gray;
+    align-items: center;
+
+    margin: 1rem;
+}
+.right_side .show_more h5:hover{
+  background:rgb(235, 235, 235) ;
+}
+.right_side .show_more h5,
+.right{
+    font-weight: 500;
+  
+}
+.suggs{
+  box-shadow: 22px 19px 43px -9px rgba(55,143,233,0.61);
+ margin-top: 1rem;
+  background: #fff;
+  border-radius: 0.8rem;
+  height: 70vh;
+  position: sticky;
+  top: 12%;
+}
+.suggs .sugg{
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  border-bottom: 1px solid rgb(199, 198, 198);
+}
+.suggs .sugg .one{
+  margin: 0 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.suggs .sugg .one:hover{
+  text-decoration: underline;
+}
+.suggs .sugg .one img{
+  height: 2rem;
+  width :2rem;
+  border-radius: 10%;
+  
+}
+.suggs .sugg .two {
+  color:gray;
+  text-align: center;
+}
+.suggs .sugg .three{
+display: flex;
+border-radius: 15px;
+align-items: center;
+border: 2px solid black;
+margin: 0.2rem 1.4rem;
+
+}
+.suggs .sugg .three:hover{
+  background: rgb(235, 235, 235);
+}
+
+.suggs .sugg .three a{
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+.suggs .recommanded{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  padding: 0.4rem 1rem 0.3rem 1rem;
+  border-radius: 0rem 0rem 0.8rem 0.8rem;
+}
+.suggs .recommanded:hover{
+  background: rgb(235, 233, 233);
+}
+.suggs .recommanded a{
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
